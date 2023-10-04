@@ -2,7 +2,7 @@ import ProductList from "@/components/ProductList";
 import getProducts from "@/actions/getProducts";
 import getProduct from "@/actions/getProduct";
 import Container from "@/components/ui/Container";
-import Gallery from '@/components/gallery';
+import Gallery from "@/components/gallery";
 import Info from "@/components/Info";
 
 export const revalidate = 0;
@@ -17,7 +17,9 @@ const ProductPage = async ({ params }: ProductPageProps) => {
   const suggestedProducts = await getProducts({
     categoryId: product?.category?.id,
   });
-
+  const fillteredSuggested = suggestedProducts.filter(
+    (product) => product.id !== params.productId
+  );
   if (!product) {
     return null;
   }
@@ -33,7 +35,7 @@ const ProductPage = async ({ params }: ProductPageProps) => {
             </div>
           </div>
           <hr className="my-10" />
-          <ProductList title="Related Items" items={suggestedProducts} />
+          <ProductList title="Related Items" items={fillteredSuggested} />
         </div>
       </Container>
     </div>
