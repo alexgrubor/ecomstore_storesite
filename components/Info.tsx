@@ -2,7 +2,7 @@
 
 import { ShoppingCart } from "lucide-react";
 
-import Button from "./ui/Button";
+import {Button }from "./ui/Button";
 import Currency from "./ui/Currency";
 import { Product } from "@/types";
 import useCart from "@/hooks/useCart";
