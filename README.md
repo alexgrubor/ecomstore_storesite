@@ -84,6 +84,6 @@ This project is licensed under the [MIT License](LICENSE.md).
 
 ---
 
-Thank you for using the E-Commerce CMS Store Site! If you have any questions, issues, or feedback, please don't hesitate to open an issue or reach out to us.
+Thank you for using the E-Commerce CMS Store Site! If you have any questions, issues, or feedback, please don't hesitate to open an issue or reach out to me.
 
 
